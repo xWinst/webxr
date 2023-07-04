@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Web XR Scene Demo</title>
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene vr-mode-ui="enabled: false">
+            <a-assets>
+                <a-asset-item
+                    id="cube-model"
+                    src="https://cdn.aframe.io/models/cube/cube.gltf"
+                ></a-asset-item>
+            </a-assets>
+
+            <a-entity id="cameraRig" position="0 1.6 0">
+                <a-camera id="camera" look-controls></a-camera>
+            </a-entity>
+
+            <a-entity
+                id="cube"
+                gltf-model="#cube-model"
+                scale="0.5 0.5 0.5"
+                rotation="0 45 0"
+            ></a-entity>
+
+            <a-sky color="#ECECEC"></a-sky>
+        </a-scene>
+    </body>
+</html>
